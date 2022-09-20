@@ -12,6 +12,7 @@
 		D2F7B263279650B800A84719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F7B261279650B800A84719 /* Main.storyboard */; };
 		D2F7B265279650B900A84719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F7B264279650B900A84719 /* Assets.xcassets */; };
 		D2F7B268279650B900A84719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F7B266279650B900A84719 /* LaunchScreen.storyboard */; };
+		EB13513A28DA4CF900A52C9B /* StudentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D2F7B264279650B900A84719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2F7B267279650B900A84719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2F7B269279650B900A84719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				D2F7B26F279650CC00A84719 /* Resources */,
 				D2F7B261279650B800A84719 /* Main.storyboard */,
+				EB13513B28DA4EB600A52C9B /* Controllers */,
 			);
 			path = CohortList;
 			sourceTree = "<group>";
@@ -70,6 +73,22 @@
 				D2F7B269279650B900A84719 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB13513B28DA4EB600A52C9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB13513C28DA4EC300A52C9B /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EB13513C28DA4EC300A52C9B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB13513A28DA4CF900A52C9B /* StudentListTableViewController.swift in Sources */,
 				D2F7B25C279650B800A84719 /* AppDelegate.swift in Sources */,
 				D2F7B25E279650B800A84719 /* SceneDelegate.swift in Sources */,
 			);
