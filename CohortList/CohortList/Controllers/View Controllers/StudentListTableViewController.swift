@@ -8,9 +8,16 @@
 import UIKit
 
 class StudentListTableViewController: UITableViewController {
-
+    @IBOutlet weak var enterStudentNameTitle: UITextField!
+    @IBOutlet weak var enterCohortIDLabel: UITextField!
+    @IBOutlet weak var cellTitle: UILabel!
+    @IBOutlet weak var cellDetail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        self.enterStudentNameTitle.delegate = self
+//        self.enterCohortIDLabel.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -18,25 +25,52 @@ class StudentListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    @IBAction func addButtonClicked(_ sender: Any) {
+        createStudent()
+//        emptyTextField()
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return StudentController.sharedInstance.students.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath)
+        let students = StudentController.sharedInstance.students[indexPath.row]
+        let studentToDisplay = students
+        cell.textLabel?.text = studentToDisplay.name
+        cell.detailTextLabel?.text = studentToDisplay.cohortID
+    
 
         // Configure the cell...
 
         return cell
+    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        emptyTextField()
+//        createStudent()
+//
+//        return true
+//
+//    }
+//    func emptyTextField() {
+//        enterStudentNameTitle.text = ""
+//        enterCohortIDLabel.text = ""
+//    }
+    
+    func createStudent() {
+        guard let studentNameInput = enterStudentNameTitle.text else {return}
+        guard let cohortIDInput = enterCohortIDLabel.text else {return}
+        StudentController.sharedInstance.createStudent(name: studentNameInput, cohortID: cohortIDInput)
+        
+        
+        
+        tableView.reloadData()
     }
     
 

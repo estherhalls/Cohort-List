@@ -21,7 +21,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8ar-RB-SlQ">
-                                    <rect key="frame" x="117" y="14" width="181" height="72"/>
+                                    <rect key="frame" x="116.5" y="14" width="181" height="72"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(Enter Student Name...)" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v1J-oP-9Zb">
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="34"/>
@@ -34,6 +34,12 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WMz-6D-YVI" firstAttribute="top" secondItem="v1J-oP-9Zb" secondAttribute="bottom" id="0S6-5t-QKh"/>
+                                        <constraint firstAttribute="trailing" secondItem="WMz-6D-YVI" secondAttribute="trailing" id="AdK-JD-Hm7"/>
+                                        <constraint firstItem="WMz-6D-YVI" firstAttribute="leading" secondItem="8ar-RB-SlQ" secondAttribute="leading" id="Mfn-Ca-Tkb"/>
+                                        <constraint firstAttribute="bottom" secondItem="WMz-6D-YVI" secondAttribute="bottom" id="p0l-sa-MpJ"/>
+                                    </constraints>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" red="0.58229838342933393" green="0.74993101325068445" blue="0.70103961229324341" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,9 +81,17 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="NRp-PS-NPy">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="tz6-oP-NiU"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="tz6-oP-NiU">
+                            <connections>
+                                <action selector="addButtonClicked:" destination="BT1-pw-Bnx" id="g5r-NZ-55m"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="enterCohortIDLabel" destination="WMz-6D-YVI" id="hW2-JE-LVd"/>
+                        <outlet property="enterStudentNameTitle" destination="v1J-oP-9Zb" id="P0W-Xi-wzE"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="628.98550724637687" y="111.83035714285714"/>
