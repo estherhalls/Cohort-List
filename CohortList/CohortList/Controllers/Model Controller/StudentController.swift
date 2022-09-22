@@ -17,14 +17,23 @@ class StudentController{
 // MARK: - CRUD
 
 // CREATE
-    func createStudent(name: String, cohortID: String) {
-        let newStudent = Student(name: name, cohortID: cohortID)
+    func createStudent(name: String, cohortID: String, studentDescription: String) {
+        let newStudent = Student(name: name, cohortID: cohortID, studentDescription: studentDescription)
         students.append(newStudent)
         
     } // End of Func
 // REUSE
 
 // UPDATE
-
+    func update(updateStudent: Student, newName: String, newCohort: String, newStudentDetails: String) {
+        updateStudent.name = newName
+        updateStudent.cohortID = newCohort
+        updateStudent.studentDescription = newStudentDetails
+    }
 // DELETE
+    func delete(deleteStudent:Student) {
+        guard let index = students.firstIndex(of: deleteStudent) else {return}
+        students.remove(at: index)
+        
+    }
 } // End of Class

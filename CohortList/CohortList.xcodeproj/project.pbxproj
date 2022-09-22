@@ -15,6 +15,7 @@
 		EB13513A28DA4CF900A52C9B /* StudentListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */; };
 		EB13513E28DA5A7000A52C9B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13513D28DA5A7000A52C9B /* Student.swift */; };
 		EB13514128DA5C1F00A52C9B /* StudentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB13514028DA5C1F00A52C9B /* StudentController.swift */; };
+		EB59389628DD07DF0026A516 /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB59389528DD07DF0026A516 /* StudentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListTableViewController.swift; sourceTree = "<group>"; };
 		EB13513D28DA5A7000A52C9B /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		EB13514028DA5C1F00A52C9B /* StudentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentController.swift; sourceTree = "<group>"; };
+		EB59389528DD07DF0026A516 /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,8 @@
 			children = (
 				D2F7B26F279650CC00A84719 /* Resources */,
 				D2F7B261279650B800A84719 /* Main.storyboard */,
-				EB13513B28DA4EB600A52C9B /* Controllers */,
 				EB13513F28DA5A7500A52C9B /* Model */,
+				EB13513B28DA4EB600A52C9B /* Controllers */,
 			);
 			path = CohortList;
 			sourceTree = "<group>";
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				EB13513928DA4CF900A52C9B /* StudentListTableViewController.swift */,
+				EB59389528DD07DF0026A516 /* StudentDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				D2F7B25C279650B800A84719 /* AppDelegate.swift in Sources */,
 				D2F7B25E279650B800A84719 /* SceneDelegate.swift in Sources */,
 				EB13513E28DA5A7000A52C9B /* Student.swift in Sources */,
+				EB59389628DD07DF0026A516 /* StudentDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

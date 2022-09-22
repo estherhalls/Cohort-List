@@ -10,7 +10,6 @@
         <!--Student List Table View Controller-->
         <scene sceneID="gfx-MH-z51">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bl-YN-g4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="BT1-pw-Bnx" customClass="StudentListTableViewController" customModule="CohortList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="fN7-6K-hhZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -93,6 +92,7 @@
                         <outlet property="enterStudentNameTitle" destination="v1J-oP-9Zb" id="P0W-Xi-wzE"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bl-YN-g4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="628.98550724637687" y="111.83035714285714"/>
         </scene>
