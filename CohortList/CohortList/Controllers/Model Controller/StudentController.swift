@@ -17,7 +17,7 @@ class StudentController{
 // MARK: - CRUD
 
 // CREATE
-    func createStudent(name: String, cohortID: String, studentDescription: String) {
+    func createStudent(name: String, cohortID: Int, studentDescription: String) {
         let newStudent = Student(name: name, cohortID: cohortID, studentDescription: studentDescription)
         students.append(newStudent)
         
@@ -25,7 +25,7 @@ class StudentController{
 // REUSE
 
 // UPDATE
-    func update(updateStudent: Student, newName: String, newCohort: String, newStudentDetails: String) {
+    func update(updateStudent: Student, newName: String, newCohort: Int, newStudentDetails: String) {
         updateStudent.name = newName
         updateStudent.cohortID = newCohort
         updateStudent.studentDescription = newStudentDetails

@@ -6,17 +6,16 @@
 //
 
 import Foundation
-class Student{
+class Student: Equatable{
     var name: String
-    var cohortID: String
+    var cohortID: Int
     var studentDescription: String
-    init(name: String, cohortID: String, studentDescription: String){
+    init(name: String, cohortID: Int, studentDescription: String){
         self.name = name
         self.cohortID = cohortID
         self.studentDescription = studentDescription
     }
-}
-extension Student: Equatable {
+
     static func == (lhs: Student, rhs: Student) -> Bool {
         return lhs.name == rhs.name &&
         lhs.cohortID == rhs.cohortID &&
